@@ -2,6 +2,7 @@
 
 int main()
 {
+  //decalring a pointer array//
   char *months[8]= 
 {
   "Jan",
