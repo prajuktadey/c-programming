@@ -1,21 +1,29 @@
 #include <stdio.h>
 
-void minus10(int *v);
-
 int main()
 {
-	int value = 100;
+	char tictactoe[3][3][3];
+	int x,y,z;
 
-	printf("Value is %d\n",value);
-	minus10(&value);//the address location is passed to the function//
-	//the function finds the address location and uses the value stored in the address//
-  printf("Value is %d\n",value); //original stored value is printed//
+	/* initialize */
+	for(x=0;x<3;x++)
+		for(y=0;y<3;y++)
+			for(z=0;z<3;z++)
+				tictactoe[x][y][z] = '.';
+
+	/* display */
+	puts("Tic Tac Toe");
+	for(x=0;x<3;x++)
+	{
+		printf("%*c",x+1,' ');		/* The * is a placeholder for the width */
+		for(y=0;y<3;y++)
+		{
+			for(z=0;z<3;z++)
+				printf(" %c ",tictactoe[x][y][z]);
+			printf("     ");	/* 5 spaces */
+		}
+		putchar('\n');
+	}
 
 	return(0);
 }
-
-void minus10(int *v)//the original value decareses by 10//
-{
-	*v = *v - 10;
-}
-
