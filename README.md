@@ -209,3 +209,26 @@ A pointer's dual usage:
 1. Used by itself, the pointer variable represents  memory location.
 2. Used with the asterisk prefix, the pointer represents the data stored at that memory location.
 3. Pointers are always declared by using the asterisk prefix.
+
+array[n] == *(ptr+n)
+1. The pointer must be initialized to the base of the array.
+2. Both pointer and array are of the same type.
+3. Element n is equal to the base address of the pointer plus n, enclosed in parentheses and referenced with the * operator.
+
+Another way to access array elements:
+1. Initialize the pointer to the array.
+2. Use the *ptr to access the element.
+3. Increment the pointer:  p++
+4. Repeat steps 2 and 3.
+5. Remember not to move the pointer beyond the last element in the array.
+
+When you need a chunk of memory on the fly, you allocate storage for a new buffer by using a pointer.
+
+MALLOC() function:
+1. Allocates memory(memory allocation)
+2. Argument is the number of bytes desired.
+3. Return value is a memory location or the NULL constant.
+4. Requires inclusion of the stdlib.h header file.
+5. Use the pointer to access the memory chunk allocated by malloc().
+6. Use the free() function to release memory when you're done.
+7. Argument is the pointer address returned from malloc().
