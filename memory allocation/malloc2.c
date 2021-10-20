@@ -5,7 +5,7 @@ int main()
 {
 	char *buffer;
 
-	buffer = (char *)malloc( sizeof(char) * 128 );//,memory allocation of 128 bytes//
+	buffer = (char *)malloc( sizeof(char) * 128 );// char datataype storage space is multiplied by memory allocation of 128 bytes//
 	if( buffer == NULL )
 	{
 		puts("Unable to allocate memory");
