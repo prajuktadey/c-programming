@@ -14,4 +14,5 @@ int main()
 }
 
 //the output will be the same//
-//memory address printed directly and through pointer notation//
+//memory address printed directly and by using pointer notation//
+
