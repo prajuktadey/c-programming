@@ -189,3 +189,23 @@ String Manipulation Things to Remember:
 5. For pointer allocation, set the buffer size large enough for the string and the null character.
 6. DO NOT FORGET TO INCLUDE THE string.h header file.
 7. The strlen() function returns characters in a string; the sizeof operator returns the storage used by the string )its  length plus one of the null character)
+
+A pointer is a variable that holds memory location.
+1. Because a pointer is a variable iteself, its value can change.
+2. A pointer can manipulate the data stored at the address it holds.
+
+Declaring a pointer:
+1. A pointer must have a data type.
+2. A pointer must be assigned a variable name.
+3. The pointer's variable name is prefixed by an asterisk when the variable is declared.
+
+Initialising a pointer:
+1. Pointers must be initialized before they're used.
+2. Pointers are assigned the address of another variable in the code, one of the same data type.
+3. The ampersand  operator & fetches the variable's address.
+4. Pointers can be assigned to an allocated chunk of memory.
+
+A pointer's dual usage:
+1. Used by itself, the pointer variable represents  memory location.
+2. Used with the asterisk prefix, the pointer represents the data stored at that memory location.
+3. Pointers are always declared by using the asterisk prefix.
