@@ -232,3 +232,68 @@ MALLOC() function:
 5. Use the pointer to access the memory chunk allocated by malloc().
 6. Use the free() function to release memory when you're done.
 7. Argument is the pointer address returned from malloc().
+
+OPENING A FILE:
+1. The file must exist.
+2. The code must know the file's name.
+3. The file must dwell in the same folder( directory) as the program processing it.
+4. Use the fopen() function to access the file.
+
+The fopen() function:
+1. Prototyped in the stdio.h header file.
+2. First argument is the filename string.
+3. Second argument is a string representing the file mode.
+4. Common file modes: r for reading and w for writing.
+5. Returns a file pointer or a file handle.
+6. FILE is a data type typecast to a structure defined in )or referenced from) the stdio.h header file.
+
+FILE *handle
+
+Reading from a file:
+1. File versions of standard C I/0 functions are used to read from an open file.
+2. The function requires the file handle as an argument.
+3. File reading fucntions: fgets(), fgetc(), fscanf(), and more.
+
+Closing the file when you're done:
+1. Use the fclose() function.
+2. The function's sole argument is the handle of an open file.
+3. Don't forget to close open files before your program quits.
+
+Writing to a file:
+1. Use the fopen() function to write or create thr file.
+2. The first argument is a filename string.
+3. The second argument is the file mode, w for writing or a for appending yto an existing file.
+
+Functions that Write to a file:
+1. Use file equivalent versions of standard output functions.
+2. fprintf(), fputc(),  fputs() and so on.
+3. These functions sport the same arguments as their standard output counterparts, but with an added file handle argument.
+
+The fopen() function's mode Strings:
+1. r-OPEN A FILE FOR READING
+2. w- OPEN A FILE FOR WRITING
+3. a- OPEN A FILE FOR APPENDING OR CREATION
+4. r+, w+, a+- OPEN A FILE FOR READING OR WRITING
+
+The file position indicator:
+1. The operating system uses the file position indicator to track where data is written to or read from a file.
+Sequential File Access:
+1. Sequential file access read from or writes to a file one byte after another.
+2. The file position indicator tracks activity until the end of the file (EOF) is encountered or the feof() function returns true.
+Random File Access:
+1. The file position indocator can be set to any location in the file.
+2. Works best for files that contain uniform data.
+
+fseek() function:
+1. int fseek( FILE *stream, long offset, int whence)
+2. whence- from whence the offset is measured.
+3. Controls the file position indicator.
+4. SEEK_SET- from the start of the file.
+5. SEEK_CUR- from the current file position indicator's location.
+6. SEEK_END- from the end of the file.
+The function returns 0 on success and -1 otherwise.
+
+C library File Manipulation Function:
+1. rename(): rename a file.
+2. unlink(): to remove a file.
+To work with files not present in the folder, you must give the full or the relative path to them or change to the given directory.
