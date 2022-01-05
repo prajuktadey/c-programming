@@ -1,14 +1,15 @@
 #include <stdio.h>
 
-int main (int argc, char *argv[]) \
+int main()
 {
+    int i, j, ctr = 0, myArray[3][4];
 
-    int m [] = {1,2,3,4,5};
-    int x,y=0;
-    for ( x=0; x<5; x++ )
-         y=y+m [x];
-    printf("%d", y);
- 
-return 0;
+  for (i=0; i<4; i++)
+  for (j=0; j<3; j++)
+  {
+   myArray[j][i] = ctr;
+   ++ctr;
+  }
+    return 0;
+
 }
-
